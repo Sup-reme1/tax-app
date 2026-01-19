@@ -1,0 +1,115 @@
+:root {
+    --primary-blue: #5d3dfd;
+    --success-green: #14b823;
+    --text-gray: #8e8e8e;
+    --bg-white: #ffffff;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Success Screen Styling */
+.content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.success-card {
+    text-align: center;
+    max-width: 350px;
+    width: 100%;
+}
+
+.icon-circle {
+    width: 100px;
+    height: 100px;
+    background: var(--success-green);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 30px;
+    color: white;
+    font-size: 50px;
+    box-shadow: 0 10px 20px rgba(20, 184, 35, 0.2);
+}
+
+.btn-done {
+    width: 100%;
+    background: var(--success-green);
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 40px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.links {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.links a {
+    color: var(--primary-blue);
+    text-decoration: none;
+    font-size: 13px;
+}
+
+/* Bottom Navigation Styling */
+.bottom-nav {
+    background: var(--bg-white);
+    height: 80px;
+    display: flex;
+    border-top: 1px solid #eee;
+    position: relative;
+}
+
+.nav-list {
+    display: flex;
+    width: 100%;
+    list-style: none;
+    position: relative;
+}
+
+.nav-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-gray);
+    cursor: pointer;
+    z-index: 10;
+    transition: 0.3s;
+}
+
+.nav-item.active { color: var(--primary-blue); }
+
+.nav-item i { font-size: 20px; margin-bottom: 5px; }
+.nav-item span { font-size: 12px; }
+
+/* The Moving Indicator (Blue Line) */
+.indicator {
+    position: absolute;
+    top: 0;
+    width: 25%; /* 100% / 4 items */
+    height: 4px;
+    background: var(--primary-blue);
+    transition: transform 0.4s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    border-radius: 0 0 5px 5px;
+}

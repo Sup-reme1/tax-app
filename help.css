@@ -1,0 +1,112 @@
+:root{
+  --green:#0f7a45;
+  --bg:#f9fafb;
+  --text:#1f2937;
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  font-family:system-ui;
+}
+
+body{
+  background:#eee;
+}
+
+.app{
+  max-width:420px;
+  margin:auto;
+  background:white;
+  min-height:100vh;
+}
+
+/* Header */
+.app-header{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:1rem;
+  border-bottom:1px solid #e5e7eb;
+}
+
+.app-header h1{
+  font-size:1.1rem;
+}
+
+/* Tabs */
+.tabs{
+  display:flex;
+}
+
+.tab{
+  flex:1;
+  padding:12px;
+  border:none;
+  background:none;
+  font-weight:600;
+  cursor:pointer;
+  border-bottom:3px solid transparent;
+}
+
+.tab.active{
+  border-bottom:3px solid var(--green);
+  color:var(--green);
+}
+
+/* Sections */
+.tab-content{
+  display:none;
+  padding:1rem;
+}
+
+.tab-content.active{
+  display:block;
+}
+
+/* FAQ */
+.search{
+  width:100%;
+  padding:10px;
+  border-radius:8px;
+  border:1px solid #e5e7eb;
+  margin-bottom:1rem;
+}
+
+.faq-item{
+  border-bottom:1px solid #e5e7eb;
+}
+
+.faq-question{
+  display:flex;
+  justify-content:space-between;
+  padding:12px 0;
+  cursor:pointer;
+}
+
+.faq-answer{
+  display:none;
+  font-size:.85rem;
+  color:#555;
+  padding-bottom:12px;
+}
+
+/* Contact */
+#contact input, #contact textarea{
+  width:100%;
+  padding:12px;
+  margin-bottom:12px;
+  border-radius:8px;
+  border:1px solid #e5e7eb;
+}
+
+.send-btn{
+  width:100%;
+  padding:14px;
+  background:var(--green);
+  color:white;
+  border:none;
+  border-radius:10px;
+  font-weight:600;
+}

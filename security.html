@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Security</title>
+<link rel="stylesheet" href="security.css"/>
+</head>
+
+<body class="app">
+
+<header class="app-header">
+  <a href="settings.html" class="back-btn">←</a>
+  <h1 class="app-title">Security</h1>
+  <span class="shield">🛡️</span>
+</header>
+
+<main class="security-page">
+
+  <div class="section-card">
+    <h2 class="section-title">Change Password</h2>
+
+    <div class="form-group">
+      <label>Current Password</label>
+      <div class="password-field">
+        <input id="currentPassword" type="password" placeholder="Enter current password">
+        <button class="eye" data-target="currentPassword">👁</button>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>New Password</label>
+      <div class="password-field">
+        <input id="newPassword" type="password" placeholder="Enter new password">
+        <button class="eye" data-target="newPassword">👁</button>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Confirm New Password</label>
+      <div class="password-field">
+        <input id="confirmPassword" type="password" placeholder="Confirm new password">
+        <button class="eye" data-target="confirmPassword">👁</button>
+      </div>
+    </div>
+
+    <!-- BUTTON MUST BE INSIDE CARD -->
+    <button class="btn-primary" id="updateBtn">Update Password</button>
+  </div>
+
+  <div class="tips-card">
+    <h3>🔒 Account Security Tips</h3>
+    <ul>
+      <li>Use strong passwords with symbols, numbers & letters</li>
+      <li>Never share your password</li>
+      <li>Update your password regularly</li>
+      <li>Beware of phishing attempts</li>
+    </ul>
+  </div>
+
+</main>
+
+<script src="security.js"></script>
+</body>
+</html>

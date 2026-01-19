@@ -1,0 +1,112 @@
+:root {
+    --bg-color: #f8f9fa;
+    --accent-blue: #4d7cfe;
+    --success-green: #24b541;
+    --text-main: #1a1a1a;
+    --text-muted: #717171;
+    --border-light: #ececec;
+}
+
+/* ... existing styles for body and container ... */
+body { 
+    font-family: -apple-system, sans-serif; 
+    background-color: var(--bg-color); 
+    display: flex; 
+    justify-content: center; 
+    padding: 20px; 
+    padding-bottom: 80px; /* Space for fixed nav if needed */
+}
+
+.container { 
+    width: 100%; 
+    max-width: 480px; 
+    background: #fff; 
+    padding: 15px; 
+    padding-bottom: 70px; /* Room for navigation bar */
+    border-radius: 15px; 
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03); 
+}
+
+/* Existing styles for summary-grid, card, section, row, etc. remain the same */
+.header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px; }
+.back-link { color: var(--accent-blue); font-weight: 600; cursor: pointer; font-size: 14px; }
+.year-tag { background: #f1f1f1; padding: 4px 12px; border-radius: 6px; font-weight: bold; font-size: 14px; }
+h1 { margin: 5px 0; font-size: 24px; }
+.sub-date { color: var(--text-muted); font-size: 13px; margin-bottom: 20px; }
+.summary-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 25px; }
+.card { border: 1px solid var(--border-light); padding: 10px; border-radius: 12px; text-align: center; }
+.card label { font-size: 9px; font-weight: 800; color: var(--text-muted); display: block; margin-bottom: 5px; }
+.card input { width: 100%; border: none; text-align: center; font-weight: 800; font-size: 13px; outline: none; background: transparent; }
+.net-val { font-size: 13px; font-weight: 800; display: block; }
+.tax-val { font-size: 9px; color: #d9534f; font-weight: bold; margin-top: 4px; }
+.section { border: 1px solid var(--border-light); border-radius: 12px; padding: 15px; margin-bottom: 15px; }
+.blue-border { border: 2px solid var(--accent-blue); }
+h3 { font-size: 15px; margin: 0 0 15px 0; }
+.row { margin-bottom: 15px; }
+.row-meta { display: flex; justify-content: space-between; margin-bottom: 6px; }
+.row-meta input { border: none; font-size: 12px; outline: none; background: transparent; }
+.row-meta .val-input { font-weight: bold; text-align: right; width: 80px; }
+.progress-bg { background: #e9ecef; height: 8px; border-radius: 10px; }
+.progress-fill { height: 100%; width: 0%; background: #8ea8ff; transition: width 0.4s ease; border-radius: 10px; }
+.btn-pdf { width: 100%; background: var(--success-green); color: white; border: none; padding: 12px; border-radius: 8px; font-weight: bold; cursor: pointer; }
+
+/* Bottom Navigation Styles */
+.bottom-nav {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    border-top: 1px solid var(--border-light);
+    background: #fff;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--text-muted);
+    cursor: pointer;
+    font-size: 10px;
+    transition: color 0.3s ease;
+}
+
+.nav-item.active {
+    color: var(--accent-blue);
+}
+
+.nav-icon {
+    font-size: 18px;
+    margin-bottom: 2px;
+}
+
+.nav-text {
+    font-weight: 600;
+
+    .bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 420px;
+    background: var(--white);
+    display: flex;
+    justify-content: space-around;
+    padding: 12px 0;
+    border-top: 1px solid #eee;
+}
+
+.nav-link { text-decoration: none; color: #bbb; text-align: center; flex: 1; }
+.nav-link i { display: block; font-size: 1.3rem; margin-bottom: 4px; }
+.nav-link span { font-size: 0.7rem; font-weight: 500; }
+.nav-link.active { color: var(--blue); }
+
+#eyeIcon { cursor: pointer; padding: 5px; font-size: 1.1rem; }
+.arrow-icon { background: var(--white); padding: 5px; border-radius: 5px; font-size: 0.7rem; }
+}

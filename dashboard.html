@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Dashboard</title>
+    <link rel="stylesheet" href="Dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+<div class="app-container">
+    <header class="user-header">
+        <img src="https://res.cloudinary.com/dzkj6wgxt/image/upload/v1768413053/taxpal_evxwre.jpg" alt="User Profile" class="profile-img">
+        <h2 class="welcome-text">Welcome To TaxPal</h2>
+    </header>
+
+    <div class="card card-green">
+        <div class="icon-circle">
+            <i class="fas fa-check"></i>
+        </div>
+        <div class="card-content">
+            <span class="card-label">COMPLIANCE STATUS</span>
+            <p class="status-bold">Good Standing</p>
+            <span class="card-subtext">Next Deadline: April 13, 2026</span>
+        </div>
+    </div>
+
+    <div class="card card-gray">
+        <div class="card-header-row">
+            <span class="card-title">ESTIMATED TAX</span>
+            <i class="far fa-eye" id="eyeIcon" onclick="togglePrivacy()"></i>
+        </div>
+        <div class="amount-display" id="taxDisplay">₦0.00</div>
+        <p class="context-text"> Based on income from Jan 1 - Today</p>
+        
+        <div class="button-group">
+            <button class="btn btn-primary" onclick="calculateTax()">Calculate Tax</button>
+            <a href="Dashboard4.html" class="btn btn-secondary">View Details &gt;</a>
+        </div>
+    </div>
+
+    <div class="card card-gray">
+        <div class="card-header-row">
+            <span class="card-title">YTD SUMMARY</span>
+            <i class="fas fa-chevron-right arrow-icon"></i>
+        </div>
+        <div class="input-grid">
+            <div class="input-field">
+                <label>Income</label>
+                <div class="input-wrapper">
+                    <span>₦</span>
+                    <input type="number" id="incomeVal" value="4000000" oninput="calculateTax()">
+                </div>
+            </div>
+            <div class="input-field">
+                <label>Expenses</label>
+                <div class="input-wrapper">
+                    <span>₦</span>
+                    <input type="number" id="expenseVal" value="2500000" oninput="calculateTax()">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card card-gray">
+        <span class="card-title">QUICK ACTION</span>
+        <div class="action-grid">
+            <button class="action-item text-green">
+                <a href="income.html">
+                    <i class="fas fa-plus"></i> Add Income
+                </a>
+            </button>
+            <button class="action-item text-red" onclick="modifyValue('expenseVal', 5000)">
+                <a href="expenses.html">
+                <i class="fas fa-minus"></i> Add Expenses
+                </a>
+              
+            </button>
+        </div>
+    </div>
+
+    <nav class="bottom-nav">
+        <a href="Dashboard.html" class="nav-link active">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="Dashboard2.html" class="nav-link">
+            <i class="fas fa-calculator"></i>
+            <span>Calculator</span>
+        </a>
+        <a href="Dashboard3.html" class="nav-link">
+            <i class="fas fa-history"></i>
+            <span>History</span>
+        </a>
+        <a href="settings.html" class="nav-link">
+            <i class="fas fa-cog"></i>
+            <span>Settings</span>
+        </a>
+    </nav>
+</div>
+
+<script src="Dashboard.js"></script>
+</body>
+</html>

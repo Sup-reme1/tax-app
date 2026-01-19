@@ -1,0 +1,72 @@
+:root {
+    --primary-green: #14ad26;
+    --naira-blue: #d6e0ff;
+    --gray-bg: #f8f8f8;
+}
+
+* { box-sizing: border-box; }
+body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; background-color: #eee; display: flex; justify-content: center; }
+
+.app-container {
+    width: 100%; max-width: 450px; background: #fff; min-height: 100vh; position: relative; padding-bottom: 90px;
+}
+
+/* Header */
+.header { display: flex; align-items: center; padding: 15px 20px; }
+.header h1 { font-size: 1.25rem; margin-left: 20px; flex-grow: 1; }
+.back-btn { text-decoration: none; color: #333; font-size: 1.3rem; }
+
+/* Quarter Controls */
+.top-controls {
+    background: var(--gray-bg); padding: 15px 20px; display: flex; justify-content: space-between; align-items: center;
+}
+.quarter-selector {
+    display: flex; border: 1px solid #333; border-radius: 8px; overflow: hidden; background: #fff;
+}
+.q-btn {
+    text-decoration: none; color: #333; padding: 8px 18px; font-weight: 500; font-size: 0.9rem; border: none;
+}
+.q-btn:not(:last-child) { border-right: 1px solid #333; }
+
+/* Toggle */
+.toggle-container { font-size: 0.8rem; display: flex; align-items: center; gap: 8px; }
+.switch { position: relative; width: 38px; height: 20px; }
+.switch input { opacity: 0; width: 0; height: 0; }
+.slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #ccc; transition: .4s; border-radius: 20px; }
+.slider:before { position: absolute; content: ""; height: 14px; width: 14px; left: 3px; bottom: 3px; background-color: #fff; transition: .4s; border-radius: 50%; }
+input:checked + .slider { background-color: var(--primary-green); }
+input:checked + .slider:before { transform: translateX(18px); }
+
+/* Main Content & Inputs */
+.content { padding: 20px; }
+.input-section { margin-bottom: 20px; }
+.input-section label { display: block; margin-bottom: 8px; font-weight: 600; }
+.input-wrapper { display: flex; border: 1px solid #999; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+.currency-prefix { background: var(--naira-blue); padding: 10px 20px; font-size: 1.4rem; border-right: 1px solid #999; }
+.input-wrapper input { border: none; width: 100%; padding: 10px; font-size: 1.2rem; outline: none; }
+.hint { color: #666; font-size: 0.8rem; margin-top: 5px; display: block; }
+
+.add-deduction-bar { background: #f0f2f5; padding: 15px; border-radius: 8px; display: flex; justify-content: space-between; margin: 20px 0; font-weight: 600; }
+.add-label { color: #3f51b5; cursor: pointer; }
+
+.divider { border: 0; border-top: 1px solid #333; margin: 15px 0; }
+
+.summary-row { display: flex; justify-content: space-between; padding: 5px 0; font-weight: 500; }
+.final-result { display: flex; justify-content: space-between; align-items: center; margin: 20px 0; font-weight: 800; font-size: 1.1rem; }
+.tax-amount { font-size: 1.5rem; }
+
+.calculate-btn { width: 100%; background: var(--primary-green); color: #fff; border: none; padding: 16px; border-radius: 12px; font-size: 1.1rem; font-weight: bold; cursor: pointer; }
+
+/* Bottom Nav */
+.bottom-nav { position: absolute; bottom: 0; width: 100%; height: 85px; display: flex; justify-content: space-around; align-items: center; border-top: 1px solid #eee; background: #fff; }
+.nav-item { text-decoration: none; color: #888; text-align: center; font-size: 0.75rem; }
+.nav-item.active { color: #222; }
+.icon-circle { background: #1a1aff; color: #fff; width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; margin-bottom: 4px; }
+
+.nav-link { text-decoration: none; color: #bbb; text-align: center; flex: 1; }
+.nav-link i { display: block; font-size: 1.3rem; margin-bottom: 4px; }
+.nav-link span { font-size: 0.7rem; font-weight: 500; }
+.nav-link.active { color: var(--blue); }
+
+#eyeIcon { cursor: pointer; padding: 5px; font-size: 1.1rem; }
+.arrow-icon { background: var(--white); padding: 5px; border-radius: 5px; font-size: 0.7rem; }

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Help & Support</title>
+<link rel="stylesheet" href="help.css" />
+</head>
+
+<body>
+<div class="app">
+
+  <!-- Header -->
+  <header class="app-header">
+    <a href="./settings.html" class="back">←</a>
+    <h1>Help & Support</h1>
+  </header>
+
+  <!-- Tabs -->
+  <div class="tabs">
+    <button class="tab active" data-tab="faq">FAQ</button>
+    <button class="tab" data-tab="contact">Contact Us</button>
+  </div>
+
+  <!-- FAQ SECTION -->
+  <div class="tab-content active" id="faq">
+    <input class="search" placeholder="search" />
+
+    <div class="faq-item">
+      <div class="faq-question">
+        What happens if i miss a new Tax deadline?
+        <span>›</span>
+      </div>
+      <div class="faq-answer">
+        Missing a tax deadline may result in penalties or interest charged by your local tax authority. The amount depends on how late the filing or payment is. If you miss a deadline, submit your tax information as soon as possible to reduce additional charges.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        How do I update my personal information?
+        <span>›</span>
+      </div>
+      <div class="faq-answer">
+        You can update your personal information at any time from your account setting. Go to profile, make the necessary changes, and save to keep your information up to date.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        How do I change my Password?
+        <span>›</span>
+      </div>
+      <div class="faq-answer">
+        To change your password, open Account settings, select <b>security</b>, and choose <b>Change Password</b>. Enter your current password and confirm your new one. if you forgot your password, use the <b>Forgot Password</b> option on the sign-in screen.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        Can I use TaxPal without tax knowledge?
+        <span>›</span>
+      </div>
+      <div class="faq-answer">
+        Yes. TaxPal is designed for everyone, including users with no tax experience. The app guides you step by step, explains tax terms clearly, and handles calculations automatically.
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT US SECTION -->
+  <div class="tab-content" id="contact">
+    <input placeholder="Name" />
+    <input placeholder="Phone Number" />
+    <input placeholder="Email Address" />
+    <textarea placeholder="Write Message..."></textarea>
+    <button class="send-btn">Send Message</button>
+  </div>
+
+</div>
+
+<script src="help.js"></script>
+</body>
+</html>

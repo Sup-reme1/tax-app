@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root{
+  --bg:#fbf6ee;
+  --green:#0f7a45;
+  --dark:#1f2937;
+  --muted:#6b7280;
+  --border:#e5e7eb;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:Inter,sans-serif;
+  background:var(--bg);
+  color:var(--dark);
+}
+
+.app{
+  max-width:420px;
+  margin:0 auto;
+  min-height:100vh;
+}
+
+/* Header */
+.app-header{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:16px;
+  border-bottom:1px solid var(--border);
+}
+
+.back-btn{
+  text-decoration:none;
+  font-size:1.2rem;
+  color:var(--dark);
+}
+
+.app-header h1{
+  font-size:1.2rem;
+  font-weight:600;
+}
+
+/* List */
+.app-content{
+  padding-top:10px;
+}
+
+.settings-item{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:16px;
+  text-decoration:none;
+  color:var(--dark);
+  border-bottom:1px solid var(--border);
+  background:transparent;
+}
+
+.settings-item:hover{
+  background:#f5f1ea;
+}
+
+.icon{
+  font-size:20px;
+}
+
+.title{
+  font-size:0.95rem;
+  font-weight:600;
+}
+
+.subtitle{
+  font-size:0.8rem;
+  color:var(--muted);
+}

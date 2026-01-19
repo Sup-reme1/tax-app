@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YTD Tax Summary - Nigeria 2026</title>
+    <link rel="stylesheet" href="Dashboard4.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <span class="back-link">← Back</span>
+        <div class="year-tag">2026</div>
+    </div>
+    <h1>Year to Date Summary</h1>
+    <div class="sub-date">January 1, 2026 - December 31, 2026</div>
+
+    <div class="summary-grid">
+        <div class="card">
+            <label>TOTAL INCOME</label>
+            <input type="number" id="totalIncome" placeholder="₦0.00" readonly>
+        </div>
+        <div class="card">
+            <label>TOTAL EXPENSES</label>
+            <input type="number" id="totalExpenses" placeholder="₦0.00" readonly>
+        </div>
+        <div class="card">
+            <label>NET INCOME</label>
+            <span class="net-val" id="netIncome">₦0.00</span>
+            <div class="tax-val">Tax: <span id="estTax">₦0.00</span></div>
+        </div>
+    </div>
+
+    <div class="section blue-border">
+        <h3>Expense Breakdown by Category</h3>
+        <div class="row">
+            <div class="row-meta"><input type="text" value="House Rent"> <input type="number" class="exp-input val-input" placeholder="0"></div>
+            <div class="progress-bg"><div class="progress-fill"></div></div>
+        </div>
+        <div class="row">
+            <div class="row-meta"><input type="text" value="Groceries"> <input type="number" class="exp-input val-input" placeholder="0"></div>
+            <div class="progress-bg"><div class="progress-fill"></div></div>
+        </div>
+        <div class="row">
+            <div class="row-meta"><input type="text" value="School Fees"> <input type="number" class="exp-input val-input" placeholder="0"></div>
+            <div class="progress-bg"><div class="progress-fill"></div></div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3>Income by Source</h3>
+        <div class="row">
+            <div class="row-meta"><input type="text" value="Design Projects"> <input type="number" class="inc-input val-input" placeholder="0"></div>
+            <div class="progress-bg"><div class="progress-fill"></div></div>
+        </div>
+        <div class="row">
+            <div class="row-meta"><input type="text" value="Consulting"> <input type="number" class="inc-input val-input" placeholder="0"></div>
+            <div class="progress-bg"><div class="progress-fill"></div></div>
+        </div>
+    </div>
+
+    <button class="btn-pdf">Download 2026 Tax Report</button>
+
+</div>
+
+<script src="Dardboard4.js"></script>
+</body>
+</html>

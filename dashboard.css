@@ -1,0 +1,176 @@
+:root {
+    --green: #14b814;
+    --light-gray: #f2f2f2;
+    --dark: #111;
+    --muted: #666;
+    --white: #ffffff;
+    --blue: #4a3aff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    margin: 0;
+    background-color: var(--white);
+    color: var(--dark);
+    display: flex;
+    justify-content: center;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 420px;
+    padding: 20px;
+    padding-bottom: 100px;
+}
+
+/* Header */
+.user-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.profile-img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.welcome-text { font-size: 1.2rem; margin: 0; font-weight: 700; }
+
+/* Cards Base */
+.card {
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+.card-green {
+    background-color: var(--green);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.card-gray { background-color: var(--light-gray); }
+
+/* Card Content */
+.icon-circle {
+    background: var(--white);
+    color: var(--green);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.card-label { font-size: 0.75rem; font-weight: 600; opacity: 0.9; letter-spacing: 0.5px; }
+.card-title { font-size: 0.8rem; font-weight: 700; color: #444; }
+.status-bold { margin: 4px 0; font-weight: 700; font-size: 1rem; }
+.card-subtext { font-size: 0.7rem; opacity: 0.85; }
+
+.card-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.amount-display {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin: 10px 0;
+    transition: filter 0.3s ease;
+}
+
+/* Privacy Blur */
+.blurred {
+    filter: blur(10px);
+    user-select: none;
+}
+
+.context-text { font-size: 0.75rem; color: var(--muted); margin-bottom: 20px; }
+
+/* Buttons */
+.button-group { display: flex; gap: 10px; }
+.btn {
+    flex: 1;
+    padding: 12px;
+    border-radius: 25px;
+    border: none;
+    font-weight: 700;
+    font-size: 0.85rem;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn-primary { background: var(--green); color: var(--white); }
+.btn-secondary { background: var(--white); color: var(--dark); border: 1px solid #ddd; }
+
+/* Inputs */
+.input-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 12px; }
+.input-field label { display: block; font-size: 0.75rem; font-weight: 600; margin-bottom: 5px; }
+.input-wrapper {
+    background: var(--white);
+    padding: 8px 12px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #e0e0e0;
+}
+.input-wrapper input {
+    border: none;
+    width: 100%;
+    font-weight: 700;
+    outline: none;
+    font-size: 0.9rem;
+    margin-left: 4px;
+}
+
+/* Quick Actions */
+.action-grid { display: flex; gap: 10px; margin-top: 12px; }
+.action-item {
+    flex: 1;
+    background: var(--white);
+    border: none;
+    padding: 15px;
+    border-radius: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.text-green { color: var(--green); }
+.text-red { color: #ff4d4d; }
+
+/* Navigation */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 420px;
+    background: var(--white);
+    display: flex;
+    justify-content: space-around;
+    padding: 12px 0;
+    border-top: 1px solid #eee;
+}
+
+.nav-link { text-decoration: none; color: #bbb; text-align: center; flex: 1; }
+.nav-link i { display: block; font-size: 1.3rem; margin-bottom: 4px; }
+.nav-link span { font-size: 0.7rem; font-weight: 500; }
+.nav-link.active { color: var(--blue); }
+
+#eyeIcon { cursor: pointer; padding: 5px; font-size: 1.1rem; }
+.arrow-icon { background: var(--white); padding: 5px; border-radius: 5px; font-size: 0.7rem; }

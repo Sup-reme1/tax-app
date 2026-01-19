@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Expense</title>
+    <link rel="stylesheet" href="expenses.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="header">
+            <button class="back-btn" type="button" onclick="window.history.back()">&#8592;</button>
+            <h1>Add Expense</h1>
+        </header>
+
+        <form id="expenseForm">
+            <div class="input-group">
+                <label>Expense Category</label>
+                <select id="category" required>
+                    <option value="" disabled selected>Select Category</option>
+                    <option value="data">Data</option>
+                    <option value="health">Health</option>
+                    <option value="groceries">Groceries</option>
+                    <option value="cable">Cable Tv</option>
+                    <option value="subscriptions">Subscriptions</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label>Expense Description (optional)</label>
+                <input type="text" id="description" placeholder="Enter details">
+            </div>
+
+            <div class="input-group">
+                <label>Amount</label>
+                <div class="amount-wrapper">
+                    <span class="currency-symbol">₦</span>
+                    <input type="number" id="amount" placeholder="0.00" step="0.01" required>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label>Date</label>
+                <input type="date" id="date" required>
+            </div>
+
+            <div class="checkbox-group">
+                <input type="checkbox" id="vat">
+                <label for="vat">Includes 7.5% VAT?</label>
+            </div>
+
+            <div class="input-group">
+                <label>Upload Receipt (optional)</label>
+                <div class="upload-area" id="upload-area">
+                    <input type="file" id="receipt" hidden accept="image/*">
+                    
+                    <div id="preview-container" class="hidden">
+                        <img id="image-preview" src="" alt="Receipt Preview">
+                        <button type="button" id="remove-img">Remove</button>
+                    </div>
+
+                    <label for="receipt" id="upload-label">
+                        <span class="plus-icon">+</span>
+                        <span class="upload-text">Upload Image</span>
+                    </label>
+                </div>
+            </div>
+
+            <button type="submit" class="save-btn">Save Expense</button>
+        </form>
+    </div>
+    <script src="expenses.js"></script>
+</body>
+</html>

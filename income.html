@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="income.css">
+    <title>Income</title>
+</head>
+<body>
+    
+<form>
+
+     <a href="login.html">&larr;</a> 
+     <h2>Add Income</h2>
+    <label for="income">Income Type <sup>*</sup></label> 
+    <select name="income">
+    <option value="" disabled selected>Select Income Type</option>
+    <option value="tax">Tax-Free Income</option>
+    <option value="employ">Employment income</option>
+    <option value="business">Business Income</option>
+    <option value="capital;">Capital Gains</option>
+    <option value="gifts">Gifts and Remittance</option>
+    <option value="crypto">Crypto and Dollar Earning</option>
+</select> <br>
+    <label for="Amount">Amount received <sup>*</sup></label>
+    <input type="" id="amount" name="amount" placeholder="Amount received in Naira" required> 
+
+    <label for="date">Date received<sup>*</sup></label> 
+    <input type="date" placeholder="04/24/2024" required> 
+
+    <label for="client">Client Pay Name <sup>*</sup></label>
+    <input type="text" placeholder="Input name" required>
+
+    <label for="payment">Payment method <sup>*</sup></label>
+        <select name="Payment method">
+         <option  value="" disabled selected>Select payment methods</option>
+         <optgroup label="online payment">
+            <option value="paystack">Paystack</option>
+            <option value="flutterwave">Flutterwave</option>
+         </optgroup>
+         <optgroup label="virtual payment">
+            <option value="ussd">USSD</option>
+         </optgroup>
+         <optgroup label="Bank">
+            <option value="bank">First bank</option>
+            <option value="bank">Access</option>
+
+        </optgroup>
+         <optgroup label="Bank transfer">
+            <option value="nibss">NIBSS instant payment</option>
+         </optgroup>
+         <optgroup label="card payment">
+            <option value="visa">Visa</option>
+            <option value="mastercard">Mastercard</option>
+         </optgroup>
+
+    </select> 
+
+    <label for="receipt">Attach Receipt/Invoice<sup>*</sup></label> 
+    <input placeholder="PDF/JPG/PNG" type="file"  required>  <br>
+    <button> <a href="success.html" style="color: white;">Save</a></button> 
+</form>
+    
+
+ <script src="income.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quarterly Tax Estimator</title>
+    <link rel="stylesheet" href="Dashboard3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="mobile-frame">
+        <div class="main-viewport">
+            <header class="app-header">
+                <i class="fa-solid fa-arrow-left" onclick="window.history.back()"></i>
+                <h1>Quarterly Tax Estimator</h1>
+            </header>
+
+            <section class="card intro-card">
+                <h2>Quarterly Tax Estimator</h2>
+                <p>Estimate your quarterly tax payments based on income and deductions</p>
+            </section>
+
+            <section class="card calculator-card">
+                <div class="chart-box">
+                    <div class="chart-column">
+                        <span id="label-q1" class="chart-val">₦0</span>
+                        <div id="bar-q1" class="chart-bar"></div>
+                        <span class="chart-label">Q1 2026</span>
+                    </div>
+                    <div class="chart-column">
+                        <span id="label-q2" class="chart-val">₦0</span>
+                        <div id="bar-q2" class="chart-bar"></div>
+                        <span class="chart-label">Q2 2026</span>
+                    </div>
+                    <div class="chart-column">
+                        <span id="label-q3" class="chart-val">₦0</span>
+                        <div id="bar-q3" class="chart-bar"></div>
+                        <span class="chart-label">Q3 2026</span>
+                    </div>
+                    <div class="chart-column">
+                        <span id="label-q4" class="chart-val">₦0</span>
+                        <div id="bar-q4" class="chart-bar"></div>
+                        <span class="chart-label">Q4 2026</span>
+                    </div>
+                </div>
+
+                <div class="summary-stats">
+                    <div class="stat-item">
+                        <label>Estimated Tax Due</label>
+                        <span id="display-tax-due" class="stat-number">₦ 0.00</span>
+                    </div>
+                    <div class="stat-item text-right">
+                        <label>Tax Rate</label>
+                        <span class="stat-number">-15.5%</span>
+                    </div>
+                </div>
+
+                <div class="input-rows">
+                    <div class="income-row total">
+                        <span>Total Income</span>
+                        <span class="dot-spacer"></span>
+                        <span id="display-total-income" class="bold">₦ 0.00</span>
+                    </div>
+                    <div class="income-row">
+                        <span>Q1 2026</span>
+                        <span class="dot-spacer"></span>
+                        <div class="field">₦ <input type="number" id="val-q1" value="15000"></div>
+                    </div>
+                    <div class="income-row">
+                        <span>Q2 2026</span>
+                        <span class="dot-spacer"></span>
+                        <div class="field">₦ <input type="number" id="val-q2" value="30000"></div>
+                    </div>
+                    <div class="income-row">
+                        <span>Q3 2026</span>
+                        <span class="dot-spacer"></span>
+                        <div class="field">₦ <input type="number" id="val-q3" value="22000"></div>
+                    </div>
+                    <div class="income-row">
+                        <span>Q4 2026</span>
+                        <span class="dot-spacer"></span>
+                        <div class="field">₦ <input type="number" id="val-q4" value="45000"></div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="footer-actions">
+                <button class="btn btn-save" onclick="alert('Progress Saved!')">Save</button>
+                <button class="btn btn-calc" id="calc-trigger">Calculate</button>
+            </div>
+        </div>
+
+    <nav class="bottom-nav">
+        <a href="Dashboard.html" class="nav-link active">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="Dashboard2.html" class="nav-link">
+            <i class="fas fa-calculator"></i>
+            <span>Calculator</span>
+        </a>
+        <a href="Dashboard3.html" class="nav-link">
+            <i class="fas fa-history"></i>
+            <span>History</span>
+        </a>
+        <a href="#" class="nav-link">
+            <i class="fas fa-cog"></i>
+            <span>Settings</span>
+        </a>
+    </nav>
+    </div>
+
+    <script src="Dashboard3.js"></script>
+</body>
+</html>

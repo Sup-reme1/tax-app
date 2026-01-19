@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root{
+  --bg:#fbf6ee;
+  --green:#0f7a45;
+  --dark:#1f2937;
+  --muted:#6b7280;
+}
+
+*{box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+  font-family:'Inter',sans-serif;
+  background:var(--bg);
+  color:var(--dark);
+}
+
+.app {
+    min-height: 100vh;
+    max-width: 500px;
+    width: 90%;
+    margin: 0 auto;
+    background-color: red;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;        /* vertically align logo & text */
+  justify-content: flex-start;    /* center the group on the screen */
+  gap: 12px;                  /* space between logo and text */
+  padding: 1rem;
+}
+
+.app-header img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+/* Text block */
+.app-profile {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.app-title {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Subtitle */
+.app-number {
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+.app-items-header {
+    font-size: 0.45rem;
+    padding-left: 17px;
+}
+
+.app {
+  background: var(--bg);
+  border-radius: 20px;
+}
+
+/* PERSONAL DETAILS */
+.app-items-header h1 {
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  color: var(--muted);
+  padding: 1rem;
+}
+
+/* form container */
+.profile {
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* each label + input */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field label {
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+/* input boxes */
+.field input {
+  height: 48px;
+  padding: 0 12px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  font-size: 0.9rem;
+  background: white;
+}
+
+/* green save button */
+.app-footer {
+  padding: 1rem;
+  position: sticky;
+  bottom: 0;
+  background: var(--bg);
+}
+
+.save-btn {
+  width: 100%;
+  height: 50px;
+  border-radius: 12px;
+  background: var(--green);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+}

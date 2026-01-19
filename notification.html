@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Tax Reminder</title>
+<link rel="stylesheet" href="notification.css"/>
+</head>
+
+<body>
+<div class="app">
+
+  <header class="header">
+    <a href="settings.html" class="back">←</a>
+    <h1>Tax Reminder</h1>
+  </header>
+
+  <main class="card">
+
+    <div class="row">
+      <span>Tax Type</span>
+      <strong>Personal Income Tax</strong>
+    </div>
+
+    <div class="row">
+      <span>Amount Due</span>
+      <strong>₦45,000</strong>
+    </div>
+
+    <div class="row">
+      <span>Due Date</span>
+      <strong>30 Sept 2026</strong>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="row toggle-row">
+      <span>Enable Reminder</span>
+      <div class="switch">
+        <input type="checkbox" id="toggle" checked>
+        <span class="slider"></span>
+      </div>
+    </div>
+
+    <div class="section">
+      <p class="label">Remind Me</p>
+      <div class="segmented">
+        <button data-days="1" class="active">1 day</button>
+        <button data-days="3">3 days</button>
+        <button data-days="7">7 days</button>
+      </div>
+    </div>
+
+    <div class="section">
+      <label class="label">Reminder Time</label>
+      <input type="time" value="10:00"/>
+    </div>
+
+    <p class="preview">
+      Reminder: Your tax payment is due in <span id="days">1</span> day
+    </p>
+
+    <button class="save-btn">Save Reminder</button>
+
+  </main>
+
+</div>
+
+<script src="notification.js"></script>
+</body>
+</html>
