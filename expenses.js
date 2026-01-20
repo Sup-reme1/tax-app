@@ -9,8 +9,8 @@ const removeBtn = document.getElementById("remove-img");
 const expenseForm = document.getElementById("expenseForm");
 
 // المصادقة
-const userId = localStorage.getItem("userId");
-const token = localStorage.getItem("token");
+// const userId = localStorage.getItem("userId");
+// const token = localStorage.getItem("token");
 
 // ---------- Notification ----------
 function showNotification(message, type = "success") {
@@ -92,10 +92,11 @@ expenseForm.addEventListener("submit", async (e) => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${token}`
+        includeCredentials: "true",
+        // Authorization: `Bearer ${token}`
       },
       body: JSON.stringify({
-        userId,
+        // userId,
         category,
         description,
         amount: Number(amount),
@@ -122,9 +123,9 @@ expenseForm.addEventListener("submit", async (e) => {
     previewContainer.classList.add("hidden");
     uploadLabel.classList.remove("hidden");
 
-    setTimeout(() => {
-      window.location.href = "dashboard.html";
-    }, 1200);
+    // setTimeout(() => {
+    //   window.location.href = "dashboard.html";
+    // }, 1200);
 
   } catch (error) {
     console.error("Expense API error:", error);
