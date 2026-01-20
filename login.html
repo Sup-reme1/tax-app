@@ -83,7 +83,7 @@
 </body>
 
 <script>
-
+    alert("login page loaded");
   const password = document.getElementById("password");
 
   const toggle = document.getElementById("togglePassword");
@@ -127,9 +127,9 @@
             console.log("Login successful:", data);
             // You can redirect the user or perform other actions here
         } 
-        setTimeout(() => {
-            window.location.href = "dashboard.html";
-        }, 1000);
+        // setTimeout(() => {
+        //     window.location.href = "dashboard.html";
+        // }, 1000);
 
     } catch (error) {
         console.error("Error during login:", error);
