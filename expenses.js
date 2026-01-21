@@ -65,6 +65,7 @@ removeBtn.addEventListener("click", () => {
 expenseForm.addEventListener("submit", async (e) => {
   e.preventDefault();
 
+  const title = document.getElementById("title").value;
   const category = document.getElementById("category").value;
   const description = document.getElementById("description").value;
   const amount = document.getElementById("amount").value;
@@ -100,8 +101,8 @@ expenseForm.addEventListener("submit", async (e) => {
         category,
         description,
         amount: Number(amount),
-        date,
-        vatIncluded
+        dateRecieved,
+        title,
       })
     });
 
