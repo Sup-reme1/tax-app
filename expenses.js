@@ -69,20 +69,20 @@ expenseForm.addEventListener("submit", async (e) => {
   const category = document.getElementById("category").value;
   const description = document.getElementById("description").value;
   const amount = document.getElementById("amount").value;
-  const date = document.getElementById("date").value;
-  const vatIncluded = document.getElementById("vat").checked;
+  const dateReceived = document.getElementById("date").value;
+  // const vatIncluded = document.getElementById("vat").checked;
 
   // ---------- Debug log ----------
   console.log("Submitting expense:", {
-    userId,
+    // userId,
     category,
     description,
     amount,
-    date,
-    vatIncluded
+    dateReceived,
+    // vatIncluded
   });
 
-  if (!category || !amount || !date) {
+  if (!category || !amount || !dateReceived) {
     showNotification("Please fill all required fields", "error");
     return;
   }
@@ -101,7 +101,7 @@ expenseForm.addEventListener("submit", async (e) => {
         category,
         description,
         amount: Number(amount),
-        dateRecieved,
+        dateReceived,
         title,
       })
     });
