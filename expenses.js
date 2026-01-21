@@ -87,13 +87,13 @@ expenseForm.addEventListener("submit", async (e) => {
   }
 
   try {
+    const token = localStorage.getItem("token");
     // ---------- API CALL ----------
     const response = await fetch(`${BASE_URL}/api/expenses`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        includeCredentials: "true",
-        // Authorization: `Bearer ${token}`
+        "Authorization": `Bearer ${token}`
       },
       body: JSON.stringify({
         // userId,
