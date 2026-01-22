@@ -1,8 +1,9 @@
+const token = localStorage.getItem("token");
+const BASE_URL = localStorage.getItem("apiUrl");
+
 getUserIncome();
 getUserExpenses();
 
-const token = localStorage.getItem("token");
-const BASE_URL = localStorage.getItem("apiUrl");
 // Configuration
 const TAX_RATE = 0.1125; // Example: 11.25% tax rate
 let isPrivate = false;
