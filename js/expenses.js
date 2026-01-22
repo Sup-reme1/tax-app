@@ -1,5 +1,3 @@
-const BASE_URL = "https://taxpal-weap.onrender.com";
-
 // عناصر الصفحة
 const receiptInput = document.getElementById("receipt");
 const imagePreview = document.getElementById("image-preview");
@@ -7,6 +5,14 @@ const previewContainer = document.getElementById("preview-container");
 const uploadLabel = document.getElementById("upload-label");
 const removeBtn = document.getElementById("remove-img");
 const expenseForm = document.getElementById("expenseForm");
+
+  const title = document.getElementById("title").value;
+  const category = document.getElementById("category").value;
+  const description = document.getElementById("description").value;
+  const amount = document.getElementById("amount").value;
+  const dateReceived = document.getElementById("date").value;
+  // const vatIncluded = document.getElementById("vat").checked;
+
 
 // المصادقة
 // const userId = localStorage.getItem("userId");
@@ -65,30 +71,20 @@ removeBtn.addEventListener("click", () => {
 expenseForm.addEventListener("submit", async (e) => {
   e.preventDefault();
 
-  const title = document.getElementById("title").value;
-  const category = document.getElementById("category").value;
-  const description = document.getElementById("description").value;
-  const amount = document.getElementById("amount").value;
-  const dateReceived = document.getElementById("date").value;
-  // const vatIncluded = document.getElementById("vat").checked;
-
-  // ---------- Debug log ----------
-  console.log("Submitting expense:", {
-    // userId,
-    category,
-    description,
-    amount,
-    dateReceived,
-    // vatIncluded
-  });
-
   if (!category || !amount || !dateReceived) {
     showNotification("Please fill all required fields", "error");
     return;
   }
+  addExpenses();
+});
+
+
+// Function to add expense
+async function addExpenses() {
 
   try {
     const token = localStorage.getItem("token");
+    const BASE_URL = localStorage.getItem("apiUrl");
     // ---------- API CALL ----------
     const response = await fetch(`${BASE_URL}/api/expenses`, {
       method: "POST",
@@ -132,4 +128,4 @@ expenseForm.addEventListener("submit", async (e) => {
     console.error("Expense API error:", error);
     showNotification("Network error. Please try again.", "error");
   }
-});
+}
