@@ -78,7 +78,6 @@ window.onload = () => {
         togglePrivacy();
     }
 
-    calculateTax();
 };
 
 // Calculate Tax api
