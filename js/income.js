@@ -38,6 +38,7 @@ btn.addEventListener('click', async (e)=>{
 async function addIncome(){
   var currency = '';
   var receiptUrl = '';
+  let amount = amount.value
   
   try {
     const token = localStorage.getItem("token");
@@ -51,13 +52,12 @@ async function addIncome(){
       },
       body: JSON.stringify({
         incomeType, // required
-        amount : amount.value, // required
+        amount, // required
         currency,
         dateReceived, // required
         clientName, // required
         paymentMethod,
         receiptUrl,
-        taxYear
       })
     });
     
@@ -80,6 +80,7 @@ async function addIncome(){
 async function updateIncomeWithId(incomeId){
   var currency = '';
   var receiptUrl = '';
+  var taxYear = '';
   
   try {
     const token = localStorage.getItem("token");
