@@ -81,6 +81,7 @@ async function updateIncomeWithId(incomeId){
   var currency = '';
   var receiptUrl = '';
   var taxYear = '';
+  let amount = amount.value;
   
   try {
     const token = localStorage.getItem("token");
@@ -94,7 +95,7 @@ async function updateIncomeWithId(incomeId){
       },
       body: JSON.stringify({
         incomeType, // required
-        amount : amount.value, // required
+        amount , // required
         currency,
         dateReceived, // required
         clientName, // required
