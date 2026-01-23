@@ -39,7 +39,7 @@ async function addIncome(){
   var currency = '';
   var receiptUrl = '';
   var taxYear = '';
-  let amount = document.getElementById("amount").value;
+  let amount = document.getElementById("amount").value.split('₦')[1].replace(/,/g, '');
 
   try {
     const token = localStorage.getItem("token");
