@@ -39,8 +39,8 @@ async function addIncome(){
   var currency = '';
   var receiptUrl = '';
   var taxYear = '';
-  let amount = amount.value;
-  
+  let amount = document.getElementById("amount").value;
+
   try {
     const token = localStorage.getItem("token");
     const BASE_URL = localStorage.getItem("apiUrl");
@@ -59,6 +59,7 @@ async function addIncome(){
         clientName, // required
         paymentMethod,
         receiptUrl,
+        taxYear
       })
     });
     
