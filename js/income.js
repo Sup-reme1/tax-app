@@ -40,6 +40,16 @@ async function addIncome(){
   var receiptUrl = '';
   var taxYear = '';
   let amount = document.getElementById("amount").value.split('₦')[1].replace(/,/g, '');
+  console.log({
+        incomeType, // required
+        amount, // required
+        currency,
+        dateReceived, // required
+        clientName, // required
+        paymentMethod,
+        receiptUrl,
+        taxYear
+      });
 
   try {
     const token = localStorage.getItem("token");
