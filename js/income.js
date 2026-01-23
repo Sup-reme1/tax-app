@@ -38,7 +38,8 @@ btn.addEventListener('click', async (e)=>{
 async function addIncome(){
   var currency = '';
   var receiptUrl = '';
-  let amount = amount.value
+  var taxYear = '';
+  let amount = amount.value;
   
   try {
     const token = localStorage.getItem("token");
