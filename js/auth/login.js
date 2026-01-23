@@ -40,7 +40,7 @@ btn.addEventListener("click", async function (event) {
             const data = await response.json();
             localStorage.setItem("token", data.token);
             localStorage.setItem("apiUrl", "https://taxpal-weap.onrender.com");
-            window.location.href = "/html/dashboards/dashboard.html";
+            window.location.href = "/tax-app/html/dashboards/dashboard.html";
         }
 
     } catch (error) {
